@@ -1,5 +1,5 @@
 How to run:
-    Go to ..\ToyRobot\Release and run ToyRobot.exe
+    Go to ..\Release and run ToyRobot.exe
     
 Source Code: ToyRobot
 Source code solution: ToyRobot.sln
