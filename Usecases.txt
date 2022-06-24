@@ -1,0 +1,103 @@
+Usecase 1:
+    Precondition: Robot is not yet placed
+    Action: PLACE 0,0,NORTH
+    Robot state: Robot is in 0,0 facing NORTH
+    UI state: Prompt user
+    
+Usecase 2:
+    Precondition: Robot is not yet placed
+    Action: PLACE       0,        0,                 north
+    Robot state: Robot is in 0,0 facing NORTH
+    UI state: Prompt user
+
+Usecase 3:
+    Precondition: Robot is not yet placed
+    Action: PLACE 0, 0, nroth
+    Robot state: Robot is not placed
+    UI state: Display error that orientation of PLACE command is invalid.
+    
+Usecase 4:
+    Precondition: Robot is not yet placed
+    Action: PLACE -1,0,NORTH
+    Robot state: Robot is not placed
+    UI state: Display error that position of PLACE command is invalid.
+    
+Usecase 5:
+    Precondition: Robot is not yet placed
+    Action: PLACE 0, 5, SOUTH
+    Robot state: Robot is not yet placed
+    UI state: Display error that position of PLACE command is invalid.
+    
+Usecase 6:
+    Precondition: Robot is not yet placed
+    Action: MOVE
+    Robot state: Robot is not yet placed
+    UI state: Display error that robot is not yet placed therefore command is invalid. Please use the PLACE command first
+    
+Usecase 7:
+    Precondition: Robot is in 0,0 facing NORTH
+    Action: mOvE
+    Robot state: Robot is in 0,1 facing NORTH
+    UI state: Prompt user
+    
+Usecase 7:
+    Precondition: Robot is in 0,0 facing SOUTH
+    Action: move
+    Robot state: Robot is in 0,0 facing SOUTH
+    UI state: Display error that robot cannot move.
+    
+Usecase 8:
+    Precondition: Robot is in 0,0 facing EAST
+    Action: MOVES
+    Robot state: Robot is in 0,0 facing EAST
+    UI state: Display error that "MOVES" is an invalid command.
+    
+Usecase 9:
+    Precondition: Robot is in 0,4 facing WEST
+    Action: MOVE
+    Robot state: Robot is in 0,4 facing WEST
+    UI state: Display error that robot cannot move.
+    
+Usecase 10:
+    Precondition: Robot is in 4,4 facing NORTH
+    Action: MOVE
+    Robot state: Robot is in 4,4 facing NORTH
+    UI state: Display error that robot cannot move.
+    
+Usecase 10:
+    Precondition: Robot is in 4,0 facing EAST
+    Action: MOVE
+    Robot state: Robot is in 4,0 facing EAST
+    UI state: Display error that robot cannot move.
+    
+Usecase 11:
+    Precondition: Robot is in 0,0 facing NORTH
+    Action: PLACE 2,2,SOUTH
+    Robot state: Robot is in 2,2 facing SOUTH
+    UI state: Prompt user
+    
+Usecase 12:
+    Precondition: Robot is in 2,2 facing SOUTH
+    Action: RIGHT
+    Robot state: Robot is in 2,2 facing WEST
+    UI state: Prompt user
+    
+Usecase 13:
+    Precondition: Robot is in 2,2 facing WEST
+    Actions:
+        RIGHT
+        RIGHT
+        MOVE
+    Robot state: Robot is in 3,2 facing EAST
+    UI state: Prompt user
+    
+Usecase 14:
+    Precondition: Robot is in 3,2 facing EAST
+    Actions:
+        LEFT
+        LEFT
+        LEFT
+        MOVE
+        report
+    Robot state: Robot is in 3,1 facing SOUTH
+    UI state: Display the robot current position and orientation. Prompt user.
