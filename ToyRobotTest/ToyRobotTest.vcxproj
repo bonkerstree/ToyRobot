@@ -89,6 +89,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>$(SolutionDir)\ToyRobot\x64\$(Configuration)\Point.obj;$(SolutionDir)\ToyRobot\x64\$(Configuration)\CommandParser.obj;$(SolutionDir)\ToyRobot\x64\$(Configuration)\ToyRobot.obj;$(SolutionDir)\ToyRobot\x64\$(Configuration)\UserInterface.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -122,6 +123,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>$(SolutionDir)\ToyRobot\x64\$(Configuration)\Point.obj;$(SolutionDir)\ToyRobot\x64\$(Configuration)\CommandParser.obj;$(SolutionDir)\ToyRobot\x64\$(Configuration)\ToyRobot.obj;$(SolutionDir)\ToyRobot\x64\$(Configuration)\UserInterface.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
